@@ -646,7 +646,14 @@ strong {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
+  
 }
+.category{
+  display: inline-block;
+
+}
+
 .table-responsive {
 	filter: drop-shadow(2px 2px 4px #606060);
 }
@@ -1019,4 +1026,5 @@ strong {
     font-size: 20px;
   }
 }
+
 
