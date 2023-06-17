@@ -701,6 +701,9 @@ strong {
 .schedule-table .country-background-image {
   background-image: url('../images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg');
 }
+.schedule-table .music-background-image {
+  background-image: url('../images/artists/214834.jpg');
+}
 
 .table-background-image-wrap {
   background-repeat: no-repeat;
