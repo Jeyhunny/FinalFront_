@@ -1,15 +1,4 @@
-/*
 
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
-*/
-
-
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #F8CB2E;
@@ -206,9 +195,6 @@ strong {
 }
 
 
-/*---------------------------------------
-  SECTION               
------------------------------------------*/
 .section-padding {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -278,9 +264,7 @@ strong {
 }
 
 
-/*---------------------------------------
-  CUSTOM ICON COLOR               
------------------------------------------*/
+
 .custom-icon {
   color: var(--secondary-color);
 }
@@ -325,9 +309,6 @@ strong {
 }
 
 
-/*---------------------------------------
-  VIDEO              
------------------------------------------*/
 .video-wrap {
   z-index: -100;
 }
@@ -637,9 +618,9 @@ strong {
 }
 
 
-/*---------------------------------------
+/*
   SCHEDULE              
------------------------------------------*/
+*/
 .schedule-section {
   background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
   background-color: #242424;
@@ -652,6 +633,10 @@ strong {
 .category{
   display: inline-block;
 
+}
+
+.artists-section {
+  background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
 }
 
 .table-responsive {
