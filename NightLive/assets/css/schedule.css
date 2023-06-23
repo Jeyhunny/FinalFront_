@@ -6,13 +6,33 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.schedule-section .section-padding{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
 
 
 .container {
+
+    
     position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .container .card {
+    
     position: relative;
     width: 320px;
     height: 450px;
