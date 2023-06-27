@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Festava Live</title>
 
-    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +24,18 @@
 
     <link href="assets/css/nightlive.css" rel="stylesheet">
 
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/click-scroll.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/animation.js"></script>
+
 
 </head>
 <body>
+    <div class="preloader" id="preloader"></div>
     <header class="site-header">
         <div class="container">
             <div class="row">
@@ -40,8 +50,7 @@
             </div>
         </div>
     </header>
-
-
+    
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -65,20 +74,40 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3">Artists</a>
+                        <a class="nav-link click-scroll" href="Artist.html">Artists</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                        <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
+                    </li>   
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Pricing</a>
+                        <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
+                        </li>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_6">Contact</a>
-                    </li>
+                    <li class="nav-item"><div class="container-srch mx-1">
+                        <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                        <div class="icon">
+                            <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                                <title>Search</title>
+                                <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                                <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                            </svg>
+                        </div>
+                    </div></li>
+                    <li class="nav-item"><a href="cart.html" class="social-icon-link">
+                        <span class="bi-basket"></span>
+                    </a></li>
+                    
                 </ul>
 
                 <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
@@ -127,11 +156,10 @@
             </div>
         </div>
     </section>
-    
     <footer class="site-footer">
         <div class="site-footer-top">
-            <div class="container">
-                <div class="row">
+            <div class="container ">
+                <div class="row reveal fade-bottom">
 
                     <div class="col-lg-6 col-12">
                         <h2 class="text-white mb-lg-0">Festava Live</h2>
@@ -173,13 +201,10 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
-            <div class="row">
-
+            <div class="row reveal fade-bottom">
                 <div class="col-lg-6 col-12 mb-4 pb-2">
                     <h5 class="site-footer-title mb-3">Links</h5>
-
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">Home</a>
@@ -206,23 +231,19 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                     <h5 class="site-footer-title mb-3">Have a question?</h5>
-
                     <p class="text-white d-flex mb-1">
                         <a href="tel: 090-080-0760" class="site-footer-link">
                             090-080-0760
                         </a>
                     </p>
-
                     <p class="text-white d-flex">
                         <a href="mailto:hello@company.com" class="site-footer-link">
                             hello@company.com
                         </a>
                     </p>
                 </div>
-
                 <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
                     <h5 class="site-footer-title mb-3">Location</h5>
 
@@ -242,7 +263,6 @@
                 </div>
             </div>
         </div>
-
         <div class="site-footer-bottom">
             <div class="container">
                 <div class="row">
@@ -251,7 +271,6 @@
                         <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
                         <p class="copyright-text">Distributed by: <a href="https://themewagon.com">ThemeWagon</a></p>
                     </div>
-
                     <div class="col-lg-8 col-12 mt-lg-5">
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
@@ -271,19 +290,4 @@
             </div>
         </div>
     </footer>
-
-    <!--
-
-T e m p l a t e M o
-
--->
-
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
-
 </body>
-

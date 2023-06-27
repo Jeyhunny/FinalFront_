@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Festava Live</title>
 
-    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,19 @@
     
     <link href="assets/css/schedule.css" rel="stylesheet">
 
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/click-scroll.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./assets/js/schedule.js"></script>
+
 
 </head>
 <body>
+    <div class="preloader" id="preloader"></div>
     <header class="site-header">
         <div class="container">
             <div class="row">
@@ -42,14 +53,15 @@
             </div>
         </div>
     </header>
+    
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 Festava Live
             </a>
-    
+
             <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,293 +71,517 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="index.html">Home</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="about.html">About</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Artist.html">Artists</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
-                    </li>
-    
+                    </li>   
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
+                        </li>
                     </li>
+                    <li class="nav-item"><div class="container-srch mx-1">
+                        <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                        <div class="icon">
+                            <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                                <title>Search</title>
+                                <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                                <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                            </svg>
+                        </div>
+                    </div></li>
+                    <li class="nav-item"><a href="cart.html" class="social-icon-link">
+                        <span class="bi-basket"></span>
+                    </a></li>
+                    
                 </ul>
-    
+
                 <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
             </div>
         </div>
     </nav>
-    <section class="schedule-section " id="section_4">
-        
-        
-                                    <div class="container">
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
-                                            </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Cem Adrian</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
+    <section class="schedule-section p-5  " id="section_4">
+        <div id="myBtnContainer">
+            <button class="btn  btn-cat active" onclick="filterSelection('all')"> Show all (10)</button>
+            <button class="btn  btn-cat" onclick="filterSelection('pop')"> Pop (5)</button>
+            <button class="btn btn-cat" onclick="filterSelection('rap')"> Rap (5)</button>
+          </div>
+                                    <div class="container d-flex ">
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Cem Adrian</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/214834.jpg" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 10.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
-                                                <a href="#">Buy Now</a>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
                                             </div>
-                                
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Billie Eilish</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/2258.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 11.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Bad Bunny</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists//2020-billboard-music-awards-show.jpg.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 12.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Adele</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/2697.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 13.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Kanye West</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/4682.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 14.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Taylor Swift</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/1323.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 15.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Drake</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/4544.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 16.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">RIhanna</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/5037.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 17.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Dua Lipa</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/3810.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 18.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal fade" id="exampleModal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                              <div class="modal-content reveal fade-bottom">
+                                                <div class="modal-header">
+                                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Traviss Scott</h1>
+                                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="./assets/images/artists/2702.webp" class="d-block w-100" alt="p-1">
+                                                    <p>Date : 19.07.2023 </p>
+                                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    </button></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <div class="filterDiv pop card mb-5 overlay-1">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/214834.jpg" class="w-100 p-3 d-block" alt="artistimg-1">
+                                                <span class="text-center align-items-center p-3">Cem Adrian</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">10.07.2023</span>
+                                                <hr>
+                                               <div class="d-flex">
+                                                <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                    <div class="button-wrapper-buy">
+                                                      <div class="text-buy">Buy Now</div>
+                                                        <span class="icon-buy">
+                                                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                    </svg>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Learn More</span></button></a>
+                                                    </div>    
+                                               </div>                                        
+                                            </div>
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv rap card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/2258.webp" class="w-100 p-3 d-block" alt="artistimg-2">
+                                                <span class="text-center align-items-center p-3">Billie Eilish</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">11.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                      
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv rap card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/2020-billboard-music-awards-show.jpg.webp" class="w-100 p-3 d-block" alt="artistimg-3">
+                                                <span class="text-center align-items-center p-3">Bad Bunny</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">12.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv pop card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/2697.webp" class="w-100 p-3 d-block" alt="artistimg-4">
+                                                <span class="text-center align-items-center p-3">Adele</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">13.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                    
+                                        <div class="filterDiv rap card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/4682.webp" class="w-100 p-3 d-block" alt="artistimg-5">
+                                                <span class="text-center align-items-center p-3">kanye West</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">14.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-4"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                      
+                                            </div>
+                                        </div>                                      
                                     </div>
-                                    <div class="container">
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                    <div class="container d-flex">
+                                        <div class="filterDiv pop card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/1323.webp" class="w-100 p-3 d-block" alt="artistimg-1">
+                                                <span class="text-center align-items-center p-3">Taylor Swift</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">15.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-5"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv rap card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/4544.webp" class="w-100 p-3 d-block" alt="artistimg-2">
+                                                <span class="text-center align-items-center p-3">Drake</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">16.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-6"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv pop card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/5037.webp" class="w-100 p-3 d-block" alt="artistimg-3">
+                                                <span class="text-center align-items-center p-3">Rihanna</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">17.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-7"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                      
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                        <div class="card">
-                                            <div class="imgBx">
-                                                <img src="assets/images/artists/214834.jpg" alt="nike-air-shoe">
+                                        <div class="filterDiv pop card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/3810.webp" class="w-100 p-3 d-block" alt="artistimg-4">
+                                                <span class="text-center align-items-center p-3">Dua Lipa</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">18.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-8"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
                                             </div>
-                                
-                                            <div class="contentBx">
-                                
-                                                <h2>Nike Shoes</h2>
-                                
-                                                <div class="size">
-                                                    <h3>Size :</h3>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span>
-                                                    <span>10</span>
-                                                </div>
-                                
-                                                <div class="color">
-                                
-                                                    <h3>Color :</h3>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <a href="#">Buy Now</a>
-                                            </div>
-                                
                                         </div>
-                                    
+                                        <div class="filterDiv rap card mb-5">
+                                            <div class="circle"></div>
+                                            <div class="circle"></div>
+                                            <div class="card-inner">
+                                                <img src="./assets/images/artists/2702.webp" class="w-100 p-3 d-block" alt="artistimg-5">
+                                                <span class="text-center align-items-center p-3">Traviss Scott</span>
+                                                <hr>
+                                                <span class="text-center align-items-center p-3">19.07.2023</span>
+                                                <hr>
+                                                <div class="d-flex">
+                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
+                                                        <div class="button-wrapper-buy">
+                                                          <div class="text-buy">Buy Now</div>
+                                                            <span class="icon-buy">
+                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                        </svg>
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="sch-btn">
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-9"><span>Learn More</span></button></a>
+                                                        </div>    
+                                                   </div>                                                       
+                                            </div>
+                                        </div>
                                     </div>
-                                   
-                                  
-                                
-                                    
-                               
-                          
-                        
-                        
-                     
-           
-          
-        
-        
-    
-      
-    
-        
- 
-
-
-
-
-
     </section>
     <footer class="site-footer">
         <div class="site-footer-top">
             <div class="container">
-                <div class="row">
+                <div class="row reveal fade-bottom">
 
                     <div class="col-lg-6 col-12">
                         <h2 class="text-white mb-lg-0">Festava Live</h2>
@@ -389,7 +625,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row reveal fade-bottom">
 
                 <div class="col-lg-6 col-12 mb-4 pb-2">
                     <h5 class="site-footer-title mb-3">Links</h5>
@@ -485,11 +721,47 @@
             </div>
         </div>
     </footer>
+    <script>
+        filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
- 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn-cat");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
 </body>

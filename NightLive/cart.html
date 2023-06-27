@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Festava Live</title>
 
-    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +23,21 @@
     <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="assets/css/nightlive.css" rel="stylesheet">
-    <link href="assets/css/cart.css" rel="stylesheet">
+    <link href="./assets/css/cart.css" rel="stylesheet">
+    
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/click-scroll.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/animation.js"></script>
 
 </head>
 
 <body>
-
+    <div class="preloader" id="preloader"></div>
     <main>
 
         <header class="site-header">
@@ -48,6 +58,7 @@
         </header>
 
 
+        
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -63,7 +74,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            <a class="nav-link click-scroll" href="index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
@@ -76,7 +87,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
-                        </li>
+                        </li>   
 
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
@@ -85,19 +96,22 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="login.html">Login</a>
+                                <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="register.html">Register</a>
+                                <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
                             </li>
                         </li>
-                        <li class="nav-item"><a href="#"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal searchIcon"></i></a></li>
-                        <li class="nav-item"><a href="cart.html" class="social-icon-link">
-                            <span class="bi-search"></span>
-                        </a></li>
-                        <li class="nav-item"><a href="wishlist.html" class="social-icon-link">
-                            <span class="bi-heart"></span>
-                        </a></li>
+                        <li class="nav-item"><div class="container-srch mx-1">
+                            <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                            <div class="icon">
+                                <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Search</title>
+                                    <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                                    <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                                </svg>
+                            </div>
+                        </div></li>
                         <li class="nav-item"><a href="cart.html" class="social-icon-link">
                             <span class="bi-basket"></span>
                         </a></li>
@@ -109,88 +123,115 @@
             </div>
         </nav>
 
-   <!-- Main star -->
-   <main>
-    <section id="cart-header-img">
-        <div class="cart-bg-img" style="background-image: url('./assets/images/edward-unsplash-blur.jpg')">
-            <h1>Cart</h1>
-         
+   <div class="container col-lg-12 px-3 my-5 clearfix">
+   
+    <div class="card">
+        <div class="card-header">
+            <h2>Cart</h2>
         </div>
-    </section>
-    <section id="cart-products">
-        <div class="container">
-            <div class="basket-products">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Image</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Count</th>
-                            <th scope="col">Subtotal</th>
-                            <th scope="col">Setting</th>
-                        </tr>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered m-0">
+                <thead>
+                  <tr>
 
-                    </thead>
-                    <tbody>
-                        <tr>
-
-                            <td>
-                                <img src="./assets/images/artists/214834.jpg" alt="">
-                            </td>
-                            <td>
-                                <span> Cem Adrian</span>
-                            </td>
-                            <td>
-                                <span>£<span>50</span></span>
-                            </td>
-                            <td>
-                                <button><i class="fa-solid fa-minus"></i></button>
-                                <span><input type="text" value="1"></span>
-                                <button><i class="fa-solid fa-plus"></i></button>
-
-                            </td>
-                            <td>
-                                <span>£<span>50</span></span>
-                            </td>
-                            <td>
-                                <li   class="social-icon-link">
-                                    <span class="bi-trash"></span>
-                                </li>
-                            </td>
-
-                        </tr>
-                        
-                    </tbody>
-
-                </table>
-                <div class="buttons d-flex justify-content-between ">
-                    <button class="btn btn-primary shop"><a href="Shop.html">Continue shopping</a></button>
-                    <button class="btn btn-primary grandTotal"><span>Grand total:</span> <span>0</span></button>
-                </div>
+                    <th class="text-center py-3 px-4" style="min-width: 400px;">Product Name &amp; Details</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                    <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
+                    <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="./assets/images/artists/2258.webp" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Billie Eilish</a>
+                          <small>
+                            <span>11.07.2023</span>
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$57.55</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="2"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$115.1</td>
+                    <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
+                  </tr>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="./assets/images/artists/2702.webp" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Traviss Scott</a>
+                          <small>
+                            <span>19.07.2023</span>
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
+                    <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
+                  </tr>
+        
+                  <tr>
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="./assets/images/artists/4544.webp" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">Drake</a>
+                          <small>
+                            <span>16.07.2023</span>
+                          </small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
+                    <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
+                  </tr>
+        
+                </tbody>
+              </table>
             </div>
-
-            <div class="show-alert d-none">
-                <div class="alert">
-                    <button class="btn btn-danger btn-red">YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</button>
-
+        
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+              <div class="mt-4">
+                <label class="text-muted font-weight-normal">Promocode</label>
+                <input type="text" placeholder="ABC" class="form-control">
+              </div>
+              <div class="d-flex">
+                <div class="text-right mt-4 mr-5">
+                  <label class="text-muted font-weight-normal m-0">Discount</label>
+                  <div class="text-large"><strong>$20</strong></div>
                 </div>
-                <div class="button-shop">
-                    <button class="btn btn-primary btn-orange">Continue shopping</button>
+                <div class="text-right mt-4">
+                  <label class="text-muted font-weight-normal m-0">Total price</label>
+                  <div class="text-large"><strong>$1164.65</strong></div>
                 </div>
-
+              </div>
             </div>
-
-
-        </div>
-    </section>
-
-</main>
+        
+            <div class="float-right">
+              <a href="Schedule.html"><button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button></a>
+              <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+            </div>
+        
+          </div>
+      </div>
+  </div>
         
     <footer class="site-footer">
         <div class="site-footer-top">
             <div class="container">
-                <div class="row">
+                <div class="row reveal fade-bottom">
 
                     <div class="col-lg-6 col-12">
                         <h2 class="text-white mb-lg-0">Festava Live</h2>
@@ -234,7 +275,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row reveal fade-bottom">
 
                 <div class="col-lg-6 col-12 mb-4 pb-2">
                     <h5 class="site-footer-title mb-3">Links</h5>
@@ -332,11 +373,7 @@
     </footer>
 
  
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+
 
 </body>
 

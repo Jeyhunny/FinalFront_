@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Festava Live</title>
 
-    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +24,19 @@
 
     <link href="assets/css/nightlive.css" rel="stylesheet">
 
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/click-scroll.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./assets/js/loadmore.js"></script>
+
 
 </head>
 <body>
+    <div class="preloader" id="preloader"></div>
     <header class="site-header">
         <div class="container">
             <div class="row">
@@ -45,9 +56,9 @@
             <a class="navbar-brand" href="index.html">
                 Festava Live
             </a>
-    
+
             <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,42 +68,81 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="index.html">Home</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="about.html">About</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Artist.html">Artists</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
-                    </li>
-    
+                    </li>   
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
+                        </li>
                     </li>
+                    <li class="nav-item"><div class="container-srch mx-1">
+                        <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                        <div class="icon">
+                            <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                                <title>Search</title>
+                                <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                                <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                            </svg>
+                        </div>
+                    </div></li>
+                    <li class="nav-item"><a href="cart.html" class="social-icon-link">
+                        <span class="bi-basket"></span>
+                    </a></li>
+                    
                 </ul>
-    
+
                 <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
             </div>
         </div>
-    </nav> 
+    </nav>
+
     <section class="artists-section section-padding" id="section_3">
-        <div class="container">
+        <div class="container ">
             <div class="row justify-content-center">
 
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">Meet Artists</h1>
+                <div class="col-12 text-center ">
+                    <h2 class="mb-4 text-white">Meet Artists</h1>
                 </div>
 
                 <div class="col-lg-5 col-12">
-                    <div class="artists-thumb">
+                    <div class="artists-thumb  overlay-1">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Madonna</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <div class="artists-image-wrap">
                             <img src="assets/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
                                 class="artists-image img-fluid">
@@ -118,11 +168,32 @@
 
                             <p class="mb-0">
                                 <strong>Youtube Channel:</strong>
-                                <a href="#">Madona Official</a>
+                                <a href="https://www.youtube.com/channel/UC81VD6eeuLLSfyY_D-N8sVw" target="_blank">Madona Official</a>
                             </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <span>Learn More</span>
+                              </button>
                         </div>
                     </div>
-                    <div class="artists-thumb">
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Emir Can Igrek</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/artworks-0hAbPkeQrSvS5znu-ug0tIg-t500x500.jpg" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <img src="./assets/images/artists/artworks-0hAbPkeQrSvS5znu-ug0tIg-t500x500.jpg"
                             class="artists-image img-fluid">
 
@@ -146,23 +217,44 @@
 
                             <p class="mb-0">
                                 <strong>Youtube Channel:</strong>
-                                <a href="#">EmirCan Igrek</a>
+                                <a href="https://www.youtube.com/@EmirCanIgrek" target="_blank">EmirCan Igrek</a>
                             </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                <span>Learn More</span>
+                              </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-12">
-                    <div class="artists-thumb">
+                    <div class="artists-thumb overlay-1" id="art-back">
+                        <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Rihanna</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/5037.webp" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <div class="artists-image-wrap">
-                            <img src="assets/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
-                                class="artists-image img-fluid">
+                            <img src="assets/images/artists/5037.webp"
+                                class="artists-image img-fluid ">
                         </div>
 
                         <div class="artists-hover">
                             <p>
                                 <strong>Name:</strong>
-                                Rihana
+                                Rihanna
                             </p>
 
                             <p>
@@ -179,12 +271,33 @@
 
                             <p class="mb-0">
                                 <strong>Youtube Channel:</strong>
-                                <a href="#">Rihana Official</a>
+                                <a href="https://www.youtube.com/channel/UCcgqSM4YEo5vVQpqwN-MaNw" target="_blank">Rihana Official</a>
                             </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                <span>Learn More</span>
+                              </button>
                         </div>
                     </div>
 
-                    <div class="artists-thumb">
+                    <div class="artists-thumb overlay-1">
+                        <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Bruno Bars</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <img src="./assets/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
                             class="artists-image img-fluid">
 
@@ -208,13 +321,34 @@
 
                             <p class="mb-0">
                                 <strong>Youtube Channel:</strong>
-                                <a href="#">Bruno Official</a>
+                                <a href="https://www.youtube.com/channel/UCSY5V7BJSrxNvvBF0Drslow" target="_blank">Bruno Official</a>
                             </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
+                                <span>Learn More</span>
+                              </button>
                         </div>
                     </div>
-                    <div class="artists-thumb">
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Cem Adrian</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/214834.jpg" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <img src="./assets/images/artists/214834.jpg"
-                            class="artists-image img-fluid">
+                            class="artists-image img-fluid reveal fade-bottom">
 
                         <div class="artists-hover">
                             <p>
@@ -236,22 +370,280 @@
 
                             <p class="mb-0">
                                 <strong>Youtube Channel:</strong>
-                                <a href="#">Cem Adrian</a>
+                                <a href="https://www.youtube.com/channel/UC5hUBXi8cDKsA0J4x4DKCQg" target="_blank">Cem Adrian</a>
                             </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-5">
+                                <span>Learn More</span>
+                              </button>
                         </div>
                     </div>
                    
                 </div>
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Traviss Scott</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/2702.webp" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="artists-image-wrap">
+                            <img src="assets/images/artists/2702.webp"
+                                class="artists-image img-fluid reveal fade-bottom">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Traviss Scott
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                Apr 30, 1991 
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Rap
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="https://www.youtube.com/channel/UCtxdfwb9wfkoGocVUAJ-Bmg" target="_blank">TScott</a>
+                            </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-6">
+                                <span>Learn More</span>
+                              </button>
+                        </div>
+                    </div>
+
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Drake</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/4544.webp" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <img src="./assets/images/artists/4544.webp"
+                            class="artists-image img-fluid reveal fade-bottom">
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Drake
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                October 24, 1985
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Rap
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="https://www.youtube.com/channel/UCByOQJjav0CUDwxCk-jVNRQ" target="_blank">Drake</a>
+                            </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-7">
+                                <span>Learn More</span>
+                              </button>
+                        </div>
+                    </div>
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Kanye West</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/4682.webp" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <img src="./assets/images/artists/4682.webp"
+                            class="artists-image img-fluid reveal fade-bottom">
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Kanye West
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                June 8, 1977
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Rap
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="https://www.youtube.com/@kanyewest" target="_blank">KanyeWest</a>
+                            </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-8">
+                                <span>Learn More</span>
+                              </button>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb box overlay-1">
+                        <div class="modal fade" id="exampleModal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Dua Lipa</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/3810.webp" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="artists-image-wrap">
+                            <img src="assets/images/artists/3810.webp"
+                                class="artists-image img-fluid reveal fade-bottom">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Dua Lipa
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                August 22, 1995
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Pop
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="https://www.youtube.com/channel/UC-J-KZfRV8c13fOCkhXdLiQ" target="_blank">DuaLipa</a>
+                            </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-9">
+                                <span>Learn More</span>
+                              </button>
+                        </div>
+                    </div>
+                    <div class="artists-thumb box    overlay-1">
+                        <div class="modal fade" id="exampleModal-10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content reveal fade-bottom">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Ed Sheeran</h1>
+                                  <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="./assets/images/artists/ed-sheeran--1666953393-editorial-short-form-0.jpg" class="d-block w-100" alt="p-1">
+                                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="Artist.html"><button class="modal-button">Go back !
+                                    </button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <img src="./assets/images/artists/ed-sheeran--1666953393-editorial-short-form-0.jpg"
+                            class="artists-image img-fluid reveal fade-bottom">
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Ed Sheeran
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                November 17, 1989
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Pop
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="https://www.youtube.com/channel/UC0C-w0YjGpqDXGB8IHb662A" target="_blank">ESheeran</a>
+                            </p>
+                            <button type="button" class="btn btn-outline-danger" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-10">
+                                <span>Learn More</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            <div class="align-items-center text-center"><button id="loadMoreBtn" class="btn btn-outline-danger text-center justify-content-center align-items-center">Load More</button></div>
         </div>
     </section>
-
 
     <footer class="site-footer">
         <div class="site-footer-top">
             <div class="container">
-                <div class="row">
+                <div class="row reveal fade-bottom">
 
                     <div class="col-lg-6 col-12">
                         <h2 class="text-white mb-lg-0">Festava Live</h2>
@@ -295,7 +687,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row reveal fade-bottom">
 
                 <div class="col-lg-6 col-12 mb-4 pb-2">
                     <h5 class="site-footer-title mb-3">Links</h5>
@@ -392,10 +784,4 @@
         </div>
     </footer>
 
- 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
 </body>

@@ -1,3 +1,6 @@
 .form-gap {
     padding-top: 70px;
 }
+body::-webkit-scrollbar{
+    display: none;
+}

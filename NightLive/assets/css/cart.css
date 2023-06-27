@@ -1,3 +1,22 @@
+body::-webkit-scrollbar{
+  display: none;
+}
+.preloader{
+  background: #000 url(./final-gif.gif) no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  opacity: 1;
+  transition: opacity  0.5s ease;
+}
+.preloader-hidden{
+  opacity: 0;
+}
+.card{
+  padding-top: 50px;
+}
 #cart-header-img .cart-bg-img {
     height: 320px;
     background-size: cover;
@@ -11,7 +30,6 @@
   }
   #cart-products .basket-products {
     margin-top: 100px;
-    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
     border-radius: 4px;
     background: #fff;
   }
