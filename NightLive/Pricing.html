@@ -89,10 +89,7 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
+                            <a class="nav-link click-scroll" href="account.html"><i class="fa fa-user"></i></a>
                         </li>
                     </li>
                     <li class="nav-item"><div class="container-srch mx-1">
@@ -104,10 +101,18 @@
                                 <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
                             </svg>
                         </div>
-                    </div></li>
-                    <li class="nav-item"><a href="cart.html" class="social-icon-link">
-                        <span class="bi-basket"></span>
-                    </a></li>
+                    </div>
+                </li>
+                <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
+                    <span class="bi-basket"></span>
+                    <span id="cartCount" class="badge"></span>
+                </a>
+            </li>
+                <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
+                    <span class=" bi-heart"></span>
+                    <span id="wishlistCount" class="badge"></span>
+                </a>
+            </li>
                     
                 </ul>
 
@@ -251,27 +256,27 @@
 
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
+                            <a href="index.html" class="site-footer-link">Home</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">About</a>
+                            <a href="about.html" class="site-footer-link">About</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Artists</a>
+                            <a href="Artist.html" class="site-footer-link">Artists</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Schedule</a>
+                            <a href="Schedule.html" class="site-footer-link">Schedule</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Pricing</a>
+                            <a href="Pricing.html" class="site-footer-link">Pricing</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
+                            <a href="Contatc.html" class="site-footer-link">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -298,7 +303,7 @@
                     <p class="text-white d-flex mt-3 mb-2">
                         Silang Junction South, Tagaytay, Cavite, Philippines</p>
 
-                    <a class="link-fx-1 color-contrast-higher mt-3" href="#">
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="Contatc.html">
                         <span>Our Maps</span>
                         <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -314,7 +319,7 @@
 
         <div class="site-footer-bottom">
             <div class="container">
-                <div class="row">
+                <div class="row ">
 
                     <div class="col-lg-3 col-12 mt-5">
                         <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
@@ -341,5 +346,6 @@
         </div>
     </footer>
 
- 
+    <script src="./assets/js/counter.js"></script>
 </body>
+</html>

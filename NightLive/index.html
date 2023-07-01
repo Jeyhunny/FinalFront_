@@ -22,6 +22,8 @@
 
     <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="./assets/css/comment.css">
+
     <link href="assets/css/nightlive.css" rel="stylesheet">
 
     <script src="./assets/js/bootstrap.min.js"></script>
@@ -94,10 +96,7 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
+                                <a class="nav-link click-scroll" href="account.html"><i class="fa fa-user"></i></a>
                             </li>
                         </li>
                         <li class="nav-item"><div class="container-srch mx-1">
@@ -109,10 +108,18 @@
                                     <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
                                 </svg>
                             </div>
-                        </div></li>
-                        <li class="nav-item"><a href="cart.html" class="social-icon-link">
-                            <span class="bi-basket"></span>
-                        </a></li>
+                        </div>
+                    </li>
+                    <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
+                        <span class="bi-basket"></span>
+                        <span id="cartCount" class="badge"></span>
+                    </a>
+                </li>
+                    <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
+                        <span class=" bi-heart"></span>
+                        <span id="wishlistCount" class="badge"></span>
+                    </a>
+                </li>
                         
                     </ul>
 
@@ -254,7 +261,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -305,7 +312,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -357,7 +364,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -409,7 +416,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -458,7 +465,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -510,7 +517,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -562,7 +569,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -611,7 +618,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -663,7 +670,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -714,7 +721,7 @@
                                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="Artist.html"><button class="modal-button">Go back !
+                                        <a href="artistdetail.html"><button class="modal-button">Detail
                                         </button></a>
                                     </div>
                                   </div>
@@ -754,6 +761,18 @@
     
                 </div>
                 <div class="align-items-center text-center"><button id="loadMoreBtn" class="btn btn-outline-danger text-center justify-content-center align-items-center">Load More</button></div>
+            </div>
+        </section>
+        <section class="section-comment">
+            <div class="comment-header container col-lg-12">
+                <h4 class="text-center align-items-center text-danger">Comment Section</h4>
+                <div id="comments"></div>
+                <form id="commentForm" class="comment-form">
+                  <input type="text" id="nickname" placeholder="Your Nickname" required>
+                  <input type="text" id="topic" placeholder="Topic" required>
+                  <textarea id="comment" placeholder="Your Comment" required></textarea>
+                  <button class="btn btn-outline-danger" type="submit">Add Comment</button>
+                </form>
             </div>
         </section>
 
@@ -995,10 +1014,10 @@
 
                             <div class="tab-pane fade" id="nav-ContactMap" role="tabpanel"
                                 aria-labelledby="nav-ContactMap-tab">
-                                <iframe class="google-map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!129974.469402870927!2d120.94861466021855!3d14.106066818082482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd777b1ab54c8f%3A0x6ecc514451ce2be8!2sTagaytay%2C%20Cavite%2C%20Philippines!5e1!3m2!1sen!2smy!4v1670344209509!5m2!1sen!2smy"
-                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24313.215380891517!2d49.86191205!3d40.3833254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2saz!4v1678084299482!5m2!1sen!2saz"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -1063,27 +1082,27 @@
 
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
+                            <a href="index.html" class="site-footer-link">Home</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">About</a>
+                            <a href="about.html" class="site-footer-link">About</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Artists</a>
+                            <a href="Artist.html" class="site-footer-link">Artists</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Schedule</a>
+                            <a href="Schedule.html" class="site-footer-link">Schedule</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Pricing</a>
+                            <a href="Pricing.html" class="site-footer-link">Pricing</a>
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
+                            <a href="Contatc.html" class="site-footer-link">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -1110,7 +1129,7 @@
                     <p class="text-white d-flex mt-3 mb-2">
                         Silang Junction South, Tagaytay, Cavite, Philippines</p>
 
-                    <a class="link-fx-1 color-contrast-higher mt-3" href="#">
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="Contatc.html">
                         <span>Our Maps</span>
                         <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -1152,8 +1171,8 @@
             </div>
         </div>
     </footer>
-
-
+    <script src="./assets/js/comment.js"></script>
+    <script src="./assets/js/counter.js"></script>
 </body>
 
 </html>

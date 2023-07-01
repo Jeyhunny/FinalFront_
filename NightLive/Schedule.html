@@ -55,74 +55,92 @@
     </header>
     
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                Festava Live
-            </a>
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+              Festava Live
+          </a>
 
-            <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+          <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html">Home</a>
-                    </li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html">Home</a>
+                  </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="about.html">About</a>
-                    </li>
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="about.html">About</a>
+                  </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="Artist.html">Artists</a>
-                    </li>
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="Artist.html">Artists</a>
+                  </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
-                    </li>   
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
+                  </li>   
 
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
-                    </li>
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
+                  </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="login.html"><i class="fa fa-user"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="signup.html"><i class="fa fa-user-plus"></i></a>
-                        </li>
-                    </li>
-                    <li class="nav-item"><div class="container-srch mx-1">
-                        <input placeholder="Type to search..." required="" class="input" name="text" type="text">
-                        <div class="icon">
-                            <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
-                                <title>Search</title>
-                                <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
-                                <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
-                            </svg>
-                        </div>
-                    </div></li>
-                    <li class="nav-item"><a href="cart.html" class="social-icon-link">
-                        <span class="bi-basket"></span>
-                    </a></li>
-                    
-                </ul>
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
+                      <li class="nav-item">
+                          <a class="nav-link click-scroll" href="account.html"><i class="fa fa-user"></i></a>
+                      </li>
+                  </li>
+                  <li class="nav-item"><div class="container-srch mx-1">
+                      <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                      <div class="icon">
+                          <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                              <title>Search</title>
+                              <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                              <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                          </svg>
+                      </div>
+                  </div>
+                </li>
+                <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
+                  <span class="bi-basket"></span>
+                  <span id="cartCount" class="badge"></span>
+              </a>
+          </li>
+              <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
+                  <span class=" bi-heart"></span>
+                  <span id="wishlistCount" class="badge"></span>
+              </a>
+          </li>
+                  
+              </ul>
 
-                <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
-            </div>
-        </div>
-    </nav>
-    <section class="schedule-section p-5  " id="section_4">
-        <div id="myBtnContainer">
-            <button class="btn  btn-cat active" onclick="filterSelection('all')"> Show all (10)</button>
-            <button class="btn  btn-cat" onclick="filterSelection('pop')"> Pop (5)</button>
-            <button class="btn btn-cat" onclick="filterSelection('rap')"> Rap (5)</button>
+              <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
           </div>
+      </div>
+  </nav>
+    <section class="schedule-section p-5  " id="section_4">
+      <div class="d-flex justify-content-between">
+        <div id="myBtnContainer">
+          <button class="btn  btn-cat active" onclick="filterSelection('all')"> Show all (10)</button>
+          <button class="btn  btn-cat" onclick="filterSelection('pop')"> Pop (2)</button>
+          <button class="btn btn-cat" onclick="filterSelection('rap')"> Rap (3)</button>
+          <button class="btn btn-cat" onclick="filterSelection('jazz')"> Jazz (2)</button>
+          <button class="btn btn-cat" onclick="filterSelection('rnb')"> RnB (3)</button>
+        </div>
+        <div class="sort p-5 w-25">
+          <select class="form-select" aria-label="Default select example">
+              <option selected>Sort By Latest</option>
+              <option value="1">Sort By Popularity</option>
+              <option value="2">Sort By Avarage Rating</option>
+              <option value="3">Sort By Price:Low To High</option>
+              <option value="4">Sort By Price:High to Low</option>
+          </select>
+      </div>
+      </div>
                                     <div class="container d-flex ">
                                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered ">
@@ -137,9 +155,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -156,9 +174,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -175,9 +193,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -194,9 +212,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -213,9 +231,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -232,9 +250,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -251,9 +269,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -270,9 +288,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -289,9 +307,9 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
-                                                    </button></a>
-                                                </div>
+                                                  <a href="detail.html"><button class="modal-button">Detail
+                                                  </button></a>
+                                              </div>
                                               </div>
                                             </div>
                                           </div>
@@ -308,13 +326,13 @@
                                                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="Schedule.html"><button class="modal-button">Go back !
+                                                    <a href="detail.html"><button class="modal-button">Detail
                                                     </button></a>
                                                 </div>
                                               </div>
                                             </div>
                                           </div>
-                                        <div class="filterDiv pop card mb-5 overlay-1">
+                                        <div class="filterDiv rnb card mb-5 overlay-1">
                                             <div class="circle"></div>
                                             <div class="circle"></div>
                                             <div class="card-inner">
@@ -324,18 +342,14 @@
                                                 <span class="text-center align-items-center p-3">10.07.2023</span>
                                                 <hr>
                                                <div class="d-flex">
-                                                <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                    <div class="button-wrapper-buy">
-                                                      <div class="text-buy">Buy Now</div>
-                                                        <span class="icon-buy">
-                                                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                    </svg>
-                                                        </span>
-                                                      </div>
-                                                    </div>
+                                                <div class="add-to-cart-btn">
+                                                  <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Cem Adrian', '10.07.2023', '30')"></button></a>
+                                                </div>
+                                                <div class="add-to-wish-btn">
+                                                  <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Cem Adrian', '10.07.2023')"></button></a>
+                                                </div>
                                                     <div class="sch-btn">
-                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Learn More</span></button></a>
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Learn More</button></a>
                                                     </div>    
                                                </div>                                        
                                             </div>
@@ -350,18 +364,14 @@
                                                 <span class="text-center align-items-center p-3">11.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Billie Eilish', '11.07.2023', '180')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Billie Eilish', '11.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-1"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-1">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                      
                                             </div>
@@ -376,18 +386,14 @@
                                                 <span class="text-center align-items-center p-3">12.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Bad Bunny', '12.07.2023', '160')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Bad Bunny', '12.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
@@ -402,18 +408,14 @@
                                                 <span class="text-center align-items-center p-3">13.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Adele', '13.07.2023', '140')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Adele', '13.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
@@ -423,30 +425,26 @@
                                             <div class="circle"></div>
                                             <div class="card-inner">
                                                 <img src="./assets/images/artists/4682.webp" class="w-100 p-3 d-block" alt="artistimg-5">
-                                                <span class="text-center align-items-center p-3">kanye West</span>
+                                                <span class="text-center align-items-center p-3">Kanye West</span>
                                                 <hr>
                                                 <span class="text-center align-items-center p-3">14.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Kanye West', '14.07.2023', '120')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Kanye West', '14.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-4"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-4">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                      
                                             </div>
                                         </div>                                      
                                     </div>
                                     <div class="container d-flex">
-                                        <div class="filterDiv pop card mb-5">
+                                        <div class="filterDiv rnb card mb-5">
                                             <div class="circle"></div>
                                             <div class="circle"></div>
                                             <div class="card-inner">
@@ -456,23 +454,19 @@
                                                 <span class="text-center align-items-center p-3">15.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Taylor Swift', '15.07.2023', '100')">Add to cart</button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Taylor Swift', '15.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-5"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-5">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
                                         </div>
-                                        <div class="filterDiv rap card mb-5">
+                                        <div class="filterDiv rnb card mb-5">
                                             <div class="circle"></div>
                                             <div class="circle"></div>
                                             <div class="card-inner">
@@ -482,23 +476,19 @@
                                                 <span class="text-center align-items-center p-3">16.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Drake', '16.07.2023', '80')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Drake', '16.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-6"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-6">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
                                         </div>
-                                        <div class="filterDiv pop card mb-5">
+                                        <div class="filterDiv jazz card mb-5">
                                             <div class="circle"></div>
                                             <div class="circle"></div>
                                             <div class="card-inner">
@@ -508,18 +498,14 @@
                                                 <span class="text-center align-items-center p-3">17.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Rihanna', '17.07.2023', '60')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Rihanna', '17.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-7"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-7">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                      
                                             </div>
@@ -534,23 +520,19 @@
                                                 <span class="text-center align-items-center p-3">18.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                  <div class="add-to-cart-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Dua Lipa', '18.07.2023', '40')"></button></a>
+                                                  </div>
+                                                  <div class="add-to-wish-btn">
+                                                    <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Dua Lipa', '18.07.2023')"></button></a>
+                                                  </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-8"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-8">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
                                         </div>
-                                        <div class="filterDiv rap card mb-5">
+                                        <div class="filterDiv jazz card mb-5">
                                             <div class="circle"></div>
                                             <div class="circle"></div>
                                             <div class="card-inner">
@@ -560,18 +542,14 @@
                                                 <span class="text-center align-items-center p-3">19.07.2023</span>
                                                 <hr>
                                                 <div class="d-flex">
-                                                    <div data-tooltip="Price:-$20" class="button-buy mx-2">
-                                                        <div class="button-wrapper-buy">
-                                                          <div class="text-buy">Buy Now</div>
-                                                            <span class="icon-buy">
-                                                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                                                        </svg>
-                                                            </span>
-                                                          </div>
-                                                        </div>
+                                                    <div class="add-to-cart-btn">
+                                                      <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Traviss Scott', '19.07.2023', '20')"></button></a>
+                                                    </div>
+                                                    <div class="add-to-wish-btn">
+                                                      <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Traviss Scott', '19.07.2023')"></button></a>
+                                                    </div>
                                                         <div class="sch-btn">
-                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-9"><span>Learn More</span></button></a>
+                                                            <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-9">Learn More</button></a>
                                                         </div>    
                                                    </div>                                                       
                                             </div>
@@ -579,148 +557,149 @@
                                     </div>
     </section>
     <footer class="site-footer">
-        <div class="site-footer-top">
-            <div class="container">
-                <div class="row reveal fade-bottom">
+      <div class="site-footer-top">
+          <div class="container">
+              <div class="row reveal fade-bottom">
 
-                    <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">Festava Live</h2>
-                    </div>
+                  <div class="col-lg-6 col-12">
+                      <h2 class="text-white mb-lg-0">Festava Live</h2>
+                  </div>
 
-                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-twitter"></span>
-                                </a>
-                            </li>
+                  <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                      <ul class="social-icon d-flex justify-content-lg-end">
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link">
+                                  <span class="bi-twitter"></span>
+                              </a>
+                          </li>
 
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-apple"></span>
-                                </a>
-                            </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link">
+                                  <span class="bi-apple"></span>
+                              </a>
+                          </li>
 
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link">
+                                  <span class="bi-instagram"></span>
+                              </a>
+                          </li>
 
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-youtube"></span>
-                                </a>
-                            </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link">
+                                  <span class="bi-youtube"></span>
+                              </a>
+                          </li>
 
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-pinterest"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link">
+                                  <span class="bi-pinterest"></span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-        <div class="container">
-            <div class="row reveal fade-bottom">
+      <div class="container">
+          <div class="row reveal fade-bottom">
 
-                <div class="col-lg-6 col-12 mb-4 pb-2">
-                    <h5 class="site-footer-title mb-3">Links</h5>
+              <div class="col-lg-6 col-12 mb-4 pb-2">
+                  <h5 class="site-footer-title mb-3">Links</h5>
 
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
-                        </li>
+                  <ul class="site-footer-links">
+                      <li class="site-footer-link-item">
+                          <a href="index.html" class="site-footer-link">Home</a>
+                      </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">About</a>
-                        </li>
+                      <li class="site-footer-link-item">
+                          <a href="about.html" class="site-footer-link">About</a>
+                      </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Artists</a>
-                        </li>
+                      <li class="site-footer-link-item">
+                          <a href="Artist.html" class="site-footer-link">Artists</a>
+                      </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Schedule</a>
-                        </li>
+                      <li class="site-footer-link-item">
+                          <a href="Schedule.html" class="site-footer-link">Schedule</a>
+                      </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Pricing</a>
-                        </li>
+                      <li class="site-footer-link-item">
+                          <a href="Pricing.html" class="site-footer-link">Pricing</a>
+                      </li>
 
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                      <li class="site-footer-link-item">
+                          <a href="Contatc.html" class="site-footer-link">Contact</a>
+                      </li>
+                  </ul>
+              </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">Have a question?</h5>
+              <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                  <h5 class="site-footer-title mb-3">Have a question?</h5>
 
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 090-080-0760" class="site-footer-link">
-                            090-080-0760
-                        </a>
-                    </p>
+                  <p class="text-white d-flex mb-1">
+                      <a href="tel: 090-080-0760" class="site-footer-link">
+                          090-080-0760
+                      </a>
+                  </p>
 
-                    <p class="text-white d-flex">
-                        <a href="mailto:hello@company.com" class="site-footer-link">
-                            hello@company.com
-                        </a>
-                    </p>
-                </div>
+                  <p class="text-white d-flex">
+                      <a href="mailto:hello@company.com" class="site-footer-link">
+                          hello@company.com
+                      </a>
+                  </p>
+              </div>
 
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">Location</h5>
+              <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                  <h5 class="site-footer-title mb-3">Location</h5>
 
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Silang Junction South, Tagaytay, Cavite, Philippines</p>
+                  <p class="text-white d-flex mt-3 mb-2">
+                      Silang Junction South, Tagaytay, Cavite, Philippines</p>
 
-                    <a class="link-fx-1 color-contrast-higher mt-3" href="#">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+                  <a class="link-fx-1 color-contrast-higher mt-3" href="Contatc.html">
+                      <span>Our Maps</span>
+                      <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="16" cy="16" r="15.5"></circle>
+                              <line x1="10" y1="18" x2="16" y2="12"></line>
+                              <line x1="16" y1="12" x2="22" y2="18"></line>
+                          </g>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
 
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
+      <div class="site-footer-bottom">
+          <div class="container">
+              <div class="row ">
 
-                    <div class="col-lg-3 col-12 mt-5">
-                        <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
-                        <p class="copyright-text">Distributed by: <a href="https://themewagon.com">ThemeWagon</a></p>
-                    </div>
+                  <div class="col-lg-3 col-12 mt-5">
+                      <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
+                      <p class="copyright-text">Distributed by: <a href="https://themewagon.com">ThemeWagon</a></p>
+                  </div>
 
-                    <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
+                  <div class="col-lg-8 col-12 mt-lg-5">
+                      <ul class="site-footer-links">
+                          <li class="site-footer-link-item">
+                              <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                          </li>
 
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
+                          <li class="site-footer-link-item">
+                              <a href="#" class="site-footer-link">Privacy Policy</a>
+                          </li>
 
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+                          <li class="site-footer-link-item">
+                              <a href="#" class="site-footer-link">Your Feedback</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
     <script>
         filterSelection("all")
 function filterSelection(c) {
@@ -764,4 +743,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
     </script>
+    <script src="./assets/js/counter.js"></script>
 </body>
+</html>

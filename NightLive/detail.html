@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Festava Live</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./assets/css/detail.css">
+
+    
+
+    <link href="assets/css/nightlive.css" rel="stylesheet">
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/click-scroll.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script src="./assets/js/loadmore.js"></script>
+    <script src="./assets/js/schedule.js"></script>
+
+</head>
+<body>
+    <div class="preloader" id="preloader"></div>
+    <main>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2"></i>
+                            <strong class="text-dark">Welcome to Music Festival 2023</strong>
+                        </p>
+                
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Festava Live
+                </a>
+
+                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Artist.html">Artists</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Schedule.html">Schedule</a>
+                        </li>   
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Pricing.html">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="Contatc.html">Contact</a>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="account.html"><i class="fa fa-user"></i></a>
+                            </li>
+                        </li>
+                        <li class="nav-item"><div class="container-srch mx-1">
+                            <input placeholder="Type to search..." required="" class="input" name="text" type="text">
+                            <div class="icon">
+                                <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Search</title>
+                                    <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+                                    <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
+                        <span class="bi-basket"></span>
+                        <span id="cartCount" class="badge"></span>
+                    </a>
+                </li>
+                    <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
+                        <span class=" bi-heart"></span>
+                        <span id="wishlistCount" class="badge"></span>
+                    </a>
+                </li>
+                        
+                    </ul>
+
+                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                </div>
+            </div>
+        </nav>
+        <main class="main-detail">
+            <section id="detail-header-img">
+                <div class="detail-bg-img">
+                    <h1> Detail</h1>
+                </div>
+            </section>
+            <section id="product-info">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="single-product-main-img">
+                                <img src="./assets/images/artists/2702.webp" class="w-100 d-block img-thumbnail" alt="">
+                                <div class="d-flex">
+                                    <div class="add-to-cart-btn">
+                                      <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Travis Scott', '19.07.2023', '55')"></button></a>
+                                    </div>
+                                    <div class="add-to-wish-btn">
+                                      <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Travis Scott', '19.07.2023')"></button></a>
+                                    </div>   
+                                   </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="right">
+                                <div class="product-name">
+                                    <h1>Travis Scott</h1>
+                                </div>
+                                <div class="product-price">
+                                    <div class="sale"><del><span> £</span><span>105.00</span></del></div>
+                                    <div class="price"><span> £</span><span>55.00</span></div>
+                                </div>
+                                <div class="product-description">
+                                    <p>Lorem ipsum dolor sit amet, ei ius ipsum sonet. Ea vix tincidunt incorrupte
+                                        argumentum.
+                                        Has ex sint novum appareat, ad per delenit suavitate. Sed ei ubique deseruisse. Nam
+                                        tale
+                                        oratio docendi eu, in sea aeque corpora.</p>
+                                </div>
+                                <div class="tab-menu">
+    
+                                    <ul class="tabs">
+                                        <li class="tab-link current" data-tab="tab-1">DESCRIPTION</li>
+                                        <li class="tab-link" data-tab="tab-2">ADDITIONAL INFORMATION</li>
+                                        <li class="tab-link" data-tab="tab-3" style="width: 40%;">REVIEW(1)</li>
+                                    </ul>
+    
+                                    <div id="tab-1" class="tab-content current">
+                                        <p>Lorem ipsum dolor sit amet, mei tantas omittam
+                                            ex. Oratio feugiat mel at. Tollit molestiae in cum. Eu vel accusam convenire
+                                            corrumpit.
+                                            Ei nibh zril mucius his. Ad facete fierent petentium per. Cu menandri definiebas
+                                            voluptatibus cum, eum quod dolor et ex eam clita voluptaria.</p>
+                                    </div>
+                                    <div id="tab-2" class="tab-content">
+                                        <div class="size d-flex">
+                                            <h6>Date:</h6><span>19.07.2023</span>
+                                        </div>
+                                    </div>
+                                    <div id="tab-3" class="tab-content">
+                                        <h5 class="product-rewiev">Comments (01)</h5>
+                                        <ol class="commentlist">
+                                            <li class="review">
+                                                <div class="comment_container d-flex">
+                                                    <img src="./assets/images/testimonials-img1.png" width="60" height="60" alt=""
+                                                        class="avatar avatar-60 wp-user-avatar wp-user-avatar-60 alignnone photo">
+                                                    <div class="comment-text">
+                                                        <div class="star-rating">
+                                                            <div class="product-rate">
+                                                                <i class="bi-star" style="color: #b97a56;"></i>
+                                                                <i class="bi-star" style="color: #b97a56;"></i>
+                                                                <i class="bi-star" style="color: #b97a56;"></i>
+                                                                <i class="bi-star" style="color: #b97a56;"></i>
+                                                                <i class="bi-star" style="color: #b97a56;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <p class="meta">
+                                                            <strong class="comment-user-name">Heather berry</strong>
+                                                            <span class="comment-date">–</span> <time
+                                                                class="comment-published-date">29.03.2018</time>
+                                                        </p>
+                                                        <div class="c-mment-description">
+                                                            <p>Great!</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+    
+                                        </ol>
+    
+                                        <p style="color: #b97a56;">Add a review</p>
+                                        <p>Your email address will not be published. Required fields are marked *</p>
+                                        <p>Your rating *</p>
+                                        <div class="product-rate">
+                                            <i class="bi-star" style="color: #b97a56;"></i>
+                                            <i class="bi-star" style="color: #b97a56;"></i>
+                                            <i class="bi-star" style="color: #b97a56;"></i>
+                                            <i class="bi-starr" style="color: #b97a56;"></i>
+                                            <i class="bi-star" style="color: #b97a56;"></i>
+                                        </div>
+                                        <p>Your review *</p>
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+    
+                                        <div class="label">
+                                            <label for="">Name *</label>
+                                        </div>
+                                        <div class="input">
+                                            <input type="text">
+                                        </div>
+                                        <div class="label">
+                                            <label for="">Email *</label>
+                                        </div>
+                                        <div class="input">
+                                            <input type="email">
+                                        </div>
+    
+    
+                                        <div class="submit-button">
+                                            <button type="submit">SUBMIT</button>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <section id="related">
+                    <div class="related-title">
+                        <div class="container">
+                            <h4>RELATED PRODUCTS</h4>
+        
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="container">
+                            <div class="col">
+                                <div class="container d-flex ">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Cem Adrian</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/214834.jpg" class="d-block w-100" alt="p-1">
+                                                <p>Date : 10.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Billie Eilish</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/2258.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 11.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Bad Bunny</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists//2020-billboard-music-awards-show.jpg.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 12.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Adele</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/2697.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 13.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Kanye West</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/4682.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 14.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Taylor Swift</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/1323.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 15.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Drake</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/4544.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 16.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">RIhanna</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/5037.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 17.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Dua Lipa</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/3810.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 18.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <a href="detail.html"><button class="modal-button">Detail
+                                              </button></a>
+                                          </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal fade" id="exampleModal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered ">
+                                          <div class="modal-content reveal fade-bottom">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Traviss Scott</h1>
+                                              <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="./assets/images/artists/2702.webp" class="d-block w-100" alt="p-1">
+                                                <p>Date : 19.07.2023 </p>
+                                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, animi rem, ea veritatis quibusdam distinctio atque excepturi repudiandae obcaecati at quos mollitia? Adipisci sed exercitationem, qui nemo rem accusantium tempora.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="detail.html"><button class="modal-button">Detail
+                                                </button></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="filterDiv rap card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/2258.webp" class="w-100 p-3 d-block" alt="artistimg-2">
+                                            <span class="text-center align-items-center p-3">Billie Eilish</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">11.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Billie Eilish', '11.07.2023', '180')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Billie Eilish', '11.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-1">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                      
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv rap card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/2020-billboard-music-awards-show.jpg.webp" class="w-100 p-3 d-block" alt="artistimg-3">
+                                            <span class="text-center align-items-center p-3">Bad Bunny</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">12.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Bad Bunny', '12.07.2023', '160')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Bad Bunny', '12.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-2">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                       
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv pop card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/2697.webp" class="w-100 p-3 d-block" alt="artistimg-4">
+                                            <span class="text-center align-items-center p-3">Adele</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">13.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Adele', '13.07.2023', '140')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Adele', '13.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                       
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv rap card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/4682.webp" class="w-100 p-3 d-block" alt="artistimg-5">
+                                            <span class="text-center align-items-center p-3">Kanye West</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">14.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Kanye West', '14.07.2023', '120')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Kanye West', '14.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-4">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                      
+                                        </div>
+                                    </div>                                      
+                                </div>
+                                <div class="container d-flex">
+                                    <div class="filterDiv pop card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/1323.webp" class="w-100 p-3 d-block" alt="artistimg-1">
+                                            <span class="text-center align-items-center p-3">Taylor Swift</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">15.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Taylor Swift', '15.07.2023', '100')">Add to cart</button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Taylor Swift', '15.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-5">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                       
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv rap card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/4544.webp" class="w-100 p-3 d-block" alt="artistimg-2">
+                                            <span class="text-center align-items-center p-3">Drake</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">16.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Drake', '16.07.2023', '80')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Drake', '16.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-6">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                       
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv pop card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/5037.webp" class="w-100 p-3 d-block" alt="artistimg-3">
+                                            <span class="text-center align-items-center p-3">Rihanna</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">17.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Rihanna', '17.07.2023', '60')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Rihanna', '17.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-7">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                      
+                                        </div>
+                                    </div>
+                                    <div class="filterDiv pop card mb-5 m-5">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="card-inner">
+                                            <img src="./assets/images/artists/3810.webp" class="w-100 p-3 d-block" alt="artistimg-4">
+                                            <span class="text-center align-items-center p-3">Dua Lipa</span>
+                                            <hr>
+                                            <span class="text-center align-items-center p-3">18.07.2023</span>
+                                            <hr>
+                                            <div class="d-flex">
+                                              <div class="add-to-cart-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-cart" onclick="addToTable('Dua Lipa', '18.07.2023', '40')"></button></a>
+                                              </div>
+                                              <div class="add-to-wish-btn">
+                                                <a href="#"><button type="button" id="learnmore-modal" class="btn btn-sm btn-outline-dark mx-2 bi-heart" onclick="addToWishlist('Dua Lipa', '18.07.2023')"></button></a>
+                                              </div>
+                                                    <div class="sch-btn">
+                                                        <a href="#"><button type="button" class="btn btn-sm btn-outline-dark" id="learnmore-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-8">Learn More</button></a>
+                                                    </div>    
+                                               </div>                                                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+            </section>
+    
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="site-footer">
+            <div class="site-footer-top">
+                <div class="container">
+                    <div class="row reveal fade-bottom">
+    
+                        <div class="col-lg-6 col-12">
+                            <h2 class="text-white mb-lg-0">Festava Live</h2>
+                        </div>
+    
+                        <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                            <ul class="social-icon d-flex justify-content-lg-end">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-twitter"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-apple"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-pinterest"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                <div class="row reveal fade-bottom">
+    
+                    <div class="col-lg-6 col-12 mb-4 pb-2">
+                        <h5 class="site-footer-title mb-3">Links</h5>
+    
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="index.html" class="site-footer-link">Home</a>
+                            </li>
+    
+                            <li class="site-footer-link-item">
+                                <a href="about.html" class="site-footer-link">About</a>
+                            </li>
+    
+                            <li class="site-footer-link-item">
+                                <a href="Artist.html" class="site-footer-link">Artists</a>
+                            </li>
+    
+                            <li class="site-footer-link-item">
+                                <a href="Schedule.html" class="site-footer-link">Schedule</a>
+                            </li>
+    
+                            <li class="site-footer-link-item">
+                                <a href="Pricing.html" class="site-footer-link">Pricing</a>
+                            </li>
+    
+                            <li class="site-footer-link-item">
+                                <a href="Contatc.html" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h5 class="site-footer-title mb-3">Have a question?</h5>
+    
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 090-080-0760" class="site-footer-link">
+                                090-080-0760
+                            </a>
+                        </p>
+    
+                        <p class="text-white d-flex">
+                            <a href="mailto:hello@company.com" class="site-footer-link">
+                                hello@company.com
+                            </a>
+                        </p>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                        <h5 class="site-footer-title mb-3">Location</h5>
+    
+                        <p class="text-white d-flex mt-3 mb-2">
+                            Silang Junction South, Tagaytay, Cavite, Philippines</p>
+    
+                        <a class="link-fx-1 color-contrast-higher mt-3" href="Contatc.html">
+                            <span>Our Maps</span>
+                            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="16" cy="16" r="15.5"></circle>
+                                    <line x1="10" y1="18" x2="16" y2="12"></line>
+                                    <line x1="16" y1="12" x2="22" y2="18"></line>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row ">
+    
+                        <div class="col-lg-3 col-12 mt-5">
+                            <p class="copyright-text">Copyright © 2036 Festava Live Company</p>
+                            <p class="copyright-text">Distributed by: <a href="https://themewagon.com">ThemeWagon</a></p>
+                        </div>
+    
+                        <div class="col-lg-8 col-12 mt-lg-5">
+                            <ul class="site-footer-links">
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                                </li>
+    
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Privacy Policy</a>
+                                </li>
+    
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Your Feedback</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<script src="./assets/js/detail.js"></script>
+<script src="./assets/js/counter.js"></script>
+</body>
+</html>

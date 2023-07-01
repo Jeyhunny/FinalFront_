@@ -33,7 +33,7 @@
     <script src="./assets/js/loader.js"></script>
     <script src="./assets/js/custom.js"></script>
     <script src="./assets/js/animation.js"></script>
-    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/wishlist.js"></script>
 
 </head>
 
@@ -111,16 +111,16 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
-                        <span class="bi-basket"></span>
-                        <span id="cartCount" class="badge"></span>
-                    </a>
-                </li>
-                    <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
-                        <span class=" bi-heart"></span>
-                        <span id="wishlistCount" class="badge"></span>
-                    </a>
-                </li>
+                        <li class="nav-item my-3"><a href="cart.html" class="social-icon-link">
+                            <span class="bi-basket"></span>
+                            <span id="cartCount" class="badge"></span>
+                        </a>
+                    </li>
+                        <li class="nav-item my-3"><a href="wishlist.html" class="social-icon-link">
+                            <span class=" bi-heart"></span>
+                            <span id="wishlistCount" class="badge"></span>
+                        </a>
+                    </li>
                         
                     </ul>
 
@@ -132,7 +132,7 @@
    <div class="container col-lg-12 px-3 my-5 clearfix">
     <div class="card">
         <div class="card-header">
-          <h2>Cart</h2>
+          <h2>Wishlist</h2>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -140,20 +140,17 @@
               <thead>
                 <tr>
                   <th class="text-center py-3 px-4" style="min-width: 400px;">Product Name &amp; Details</th>
-                  <th class="text-center py-3 px-4" style="width: 100px;">Price</th>
-                  <th class="text-center py-3 px-4" style="width: 100px;">Date</th>
                   <th class="text-center align-middle py-3 px-0" style="width: 40px;">Action</th>
                 </tr>
               </thead>
-              <tbody id="cart-items-body">
-                <!-- Dynamically added items will be inserted here -->
+              <tbody id="wishlist-items-body">
+                <!-- Dynamically added wishlist items will be inserted here -->
               </tbody>
             </table>
           </div>
     
           <div class="float-right">
             <a href="schedule.html"><button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to Schedule</button></a>
-            <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
           </div>
         </div>
       </div>
@@ -305,8 +302,9 @@
 
 
  
-
 <script src="./assets/js/counter.js"></script>
+
+
 </body>
 
 </html>
